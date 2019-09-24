@@ -1,6 +1,7 @@
 package com.demospringboot.application.dto;
 
-public class PersonneDTO {
+
+public class PersonneDTO extends PersistableElementDTO {
     private String name;
     private String lastName;
 

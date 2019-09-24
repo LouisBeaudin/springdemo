@@ -2,9 +2,15 @@ package com.demospringboot.domain.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity(name = "person")
-public class Personne extends PersistableElement{
+public class Personne {
+
+    @Id
+    @GeneratedValue
+    Long id;
 
     @Column(name="name")
     private String name;
@@ -13,6 +19,14 @@ public class Personne extends PersistableElement{
     private String lastName;
 
     public Personne(){}
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
